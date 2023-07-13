@@ -22,3 +22,6 @@ Route::get('beranda', function () {
 Route::get('welcome', function () {
     return view('welcome');
 });
+Route::get('homepage', function () {
+    return view('homepage');
+});
