@@ -1,132 +1,1222 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/paper_img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>Laravel</title>
+	<title>Paper Kit by Creative Tim</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/ct-paper.css" rel="stylesheet"/>
+    <link href="assets/css/demo.css" rel="stylesheet" />
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+</head>
+<body>
+<nav class="navbar navbar-ct-transparent" role="navigation-demo" id="demo-navbar">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="http://www.creative-tim.com">
+           <div class="logo-container">
+                <div class="logo">
+                    <img src="assets/paper_img/new_logo.png" alt="Creative Tim Logo">
                 </div>
-            @endif
+                <div class="brand">
+                    Creative Tim
+                </div>
+            </div>
+      </a>
+    </div>
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
+<!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navigation-example-2">
+      <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="documentation/tutorial-components.html" class="btn btn-danger btn-simple">Components</a>
+          </li>
+          <!-- <li>
+            <a href="tutorial.html" class="btn btn-danger btn-simple">Tutorial</a>
+          </li> -->
+          <li>
+            <a href="http://www.creative-tim.com/product/paper-kit" target="_blank" class="btn btn-danger btn-fill">Download</a>
+          </li>
+       </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-->
+</nav>
+
+
+<div class="wrapper">
+    <div class="demo-header demo-header-image">
+            <div class="motto">
+                <h1 class="title-uppercase">Paper Kit</h1>
+                <h3>Make your mark with a new design.</h3>
+            </div>
+    </div>
+
+    <div class="main">
+        <div class="section">
+         <div class="container tim-container">
+            <div class="tim-title">
+                <h2>Basic Elements</h2>
+            </div>
+
+            <div id="buttons">
+                    <div class="tim-title">
+                        <h3>Buttons <br />
+                            <small> Pick your colour </small>
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <button href="#fakelink" class="btn">Default</button>
+                            <button href="#fakelink" class="btn btn-primary">Primary</button>
+                            <button href="#fakelink" class="btn btn-info">Info</button>
+                            <button href="#fakelink" class="btn btn-success">Success</button>
+                            <button href="#fakelink" class="btn btn-warning">Warning</button>
+                            <button href="#fakelink" class="btn btn-danger">Danger</button>
+                            <button href="#fakelink" class="btn btn-neutral">Neutral</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <button href="#fakelink" class="btn btn-fill">Default</button>
+                            <button href="#fakelink" class="btn btn-fill btn-primary">Primary</button>
+                            <button href="#fakelink" class="btn btn-fill btn-info">Info</button>
+                            <button href="#fakelink" class="btn btn-fill btn-success">Success</button>
+                            <button href="#fakelink" class="btn btn-fill btn-warning">Warning</button>
+                            <button href="#fakelink" class="btn btn-fill btn-danger">Danger</button>
+                            <button href="#fakelink" class="btn btn-fill btn-neutral">Neutral</button>
+                        </div>
+                    </div>
+                    <div class="tim-title">
+                        <h3><small>Pick your size</small></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <button href="#fakelink" class="btn btn-danger btn-xs">Download</button>
+                            <button href="#fakelink" class="btn btn-danger btn-sm">Download</button>
+                            <button href="#fakelink" class="btn btn-danger">Download</button>
+                            <button href="#fakelink" class="btn btn-danger btn-lg">Download</button>
+                        </div>
+                    </div>
+                    <div class="tim-title">
+                        <h3>Links</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <button href="#fakelink" class="btn btn-simple">Default</button>
+                            <button href="#fakelink" class="btn btn-simple btn-primary">Primary</button>
+                            <button href="#fakelink" class="btn btn-simple btn-info">Info</button>
+                            <button href="#fakelink" class="btn btn-simple btn-success">Success</button>
+                            <button href="#fakelink" class="btn btn-simple btn-warning">Warning</button>
+                            <button href="#fakelink" class="btn btn-simple btn-danger">Danger</button>
+                            <button href="#fakelink" class="btn btn-simple btn-neutral">Neutral</button>
+                        </div>
+                    </div>
+            </div>
+        <!-- end buttons div -->
+
+            <div id="inputs">
+                <div class="tim-title">
+                    <h3>Inputs</h3>
                 </div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
+                 <div class="row">
+                        <div class="col-sm-3">
+                    	<div class="form-group">
+            	        	<input type="text" value="" placeholder="Inactive" class="form-control" />
+                    	</div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group has-success">
+                        <input type="text" value="Success" class="form-control" />
+                      </div>
+                    </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
+                    <div class="col-sm-3">
+                      <div class="form-group has-error has-feedback">
+                        <input type="text" value="Error" class="form-control" />
+                        <span class="fa fa-times form-control-feedback"></span>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                    	<div class="input-group">
+                    	<!-- 	   Since the css properties cannot check the previous sibling of an element and for the design consistency we recommend to use the "input-group-addon" after the "form-control" like in this example -->
+                          <input type="text" value="Group Addon" class="form-control">
+                          <span class="input-group-addon"><i class="fa fa-group"></i></span>
+                        </div>
+                    </div>
+                  </div> <!-- end row -->
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="tim-title">
+                            <h3>Checkboxes</h3>
                         </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+                          <label class="checkbox" for="checkbox1">
+                            <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+                            Unchecked
+                          </label>
+                          <label class="checkbox" for="checkbox2">
+                            <input type="checkbox" value="" id="checkbox2" data-toggle="checkbox" checked>
+                            Checked
+                          </label>
+                          <label class="checkbox" for="checkbox3">
+                            <input type="checkbox" value="" id="checkbox3" data-toggle="checkbox" disabled>
+                            Disabled unchecked
+                          </label>
+                          <label class="checkbox" for="checkbox4">
+                            <input type="checkbox" value="" id="checkbox4" data-toggle="checkbox" disabled checked>
+                            Disabled checked
+                          </label>
+                    </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
+                    <div class="col-sm-3">
+                        <div class="tim-title">
+                            <h3>Radio Buttons</h3>
                         </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
+                           <label class="radio">
+                            <input type="radio" name="optionsRadios" data-toggle="radio" id="optionsRadios1" value="option1">
+                            <i></i>Radio is off
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="optionsRadios" data-toggle="radio" id="optionsRadios2" value="option1" checked>
+                            <i></i>Radio is on
+                          </label>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
+                          <label class="radio">
+                            <input type="radio" name="optionsRadiosDisabled" data-toggle="radio" id="optionsRadios3" value="option2" disabled>
+                            <i></i>Disabled radio is off
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="optionsRadiosDisabled" data-toggle="radio" id="optionsRadios4" value="option2" checked disabled>
+                            <i></i>Disabled radio is on
+                          </label>
+
+                    </div>
+                </div><!--  end row -->
+
+            </div><!--  end inputs -->
+
+         </div>
+        </div>
+    </div>
+
+    <div class="section section-light-blue">
+            <div class="container">
+                <div id="menu-dropdown">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tim-title">
+                            <h3>Menu</h3>
+                        </div>
+                        <br>
+
+                        <div id="navbar">
+                            <nav class="navbar navbar-default">
+                              <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand" href="#">Menu</a>
                                 </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                  <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+<!--                                  You can add classes for different colours on the next element -->
+                                      <ul class="dropdown-menu dropdown-menu-right">
+                                        <li class="dropdown-header">Dropdown header</li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </div><!-- /.navbar-collapse -->
+                              </div><!-- /.container-fluid -->
+                            </nav>
+
+                        </div><!--  end navbar -->
+
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div> <!-- end row -->
+
+                <div class="tim-title">
+                    <h3>Dropdown</h3>
+                    <br />
+                        <div id="navbar-dropdown">
+                            <nav class="navbar navbar-default">
+                              <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand" href="#">Dropdown Colors</a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                  <ul class="nav navbar-nav pull-right">
+<!--                                       default dropdown -->
+                                    <li class="dropdown">
+                                      <buttonn href="#" class="dropdown-toggle btn" data-toggle="dropdown">Default <b class="caret"></b></button>
+<!--                                  You can add classes for different colours on the next element -->
+                                      <ul class="dropdown-menu dropdown-menu-right">
+                                        <li class="dropdown-header">Dropdown header</li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                      </ul>
+                                    </li>
+<!--                                       primary dropdown -->
+                                    <li class="dropdown">
+                                      <button href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">Primary <b class="caret"></b></button>
+<!--                                  You can add classes for different colours on the next element -->
+                                      <ul class="dropdown-menu dropdown-primary dropdown-menu-right">
+                                        <li class="dropdown-header">Dropdown header</li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                      </ul>
+                                    </li>
+<!--                                       info dropdown -->
+                                    <li class="dropdown">
+                                      <button href="#" class="dropdown-toggle btn btn-info" data-toggle="dropdown">Info <b class="caret"></b></button>
+<!--                                  You can add classes for different colours on the next element -->
+                                      <ul class="dropdown-menu dropdown-info dropdown-menu-right">
+                                        <li class="dropdown-header">Dropdown header</li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                      </ul>
+                                    </li>
+<!--                                       success dropdown -->
+                                    <li class="dropdown">
+                                      <button href="#" class="dropdown-toggle btn btn-success" data-toggle="dropdown">Success <b class="caret"></b></button>
+<!--                                  You can add classes for different colours on the next element -->
+                                      <ul class="dropdown-menu dropdown-success dropdown-menu-right">
+                                        <li class="dropdown-header">Dropdown header</li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                      </ul>
+                                    </li>
+<!--                                       warning dropdown -->
+                                    <li class="dropdown">
+                                      <button href="#" class="dropdown-toggle btn btn-warning" data-toggle="dropdown">Warning <b class="caret"></b></button>
+<!--                                  You can add classes for different colours on the next element -->
+                                      <ul class="dropdown-menu dropdown-warning dropdown-menu-right">
+                                        <li class="dropdown-header">Dropdown header</li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                      </ul>
+                                    </li>
+<!--                                       danger dropdown -->
+                                    <li class="dropdown">
+                                      <button href="#" class="dropdown-toggle btn btn-danger" data-toggle="dropdown">Danger <b class="caret"></b></button>
+<!--                                  You can add classes for different colours on the next element -->
+                                      <ul class="dropdown-menu dropdown-danger dropdown-menu-right">
+                                        <li class="dropdown-header">Dropdown header</li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                      </ul>
+                                    </li>
+
+                                  </ul>
+                                </div><!-- /.navbar-collapse -->
+                              </div><!-- /.container-fluid -->
+                            </nav>
+
+                        </div><!--  end navbar -->
+                </div>
+                <br />
+                <div class="tim-title">
+                    <h3>Navigation</h3>
+                </div>
+            </div> <!-- end menu-dropdown -->
+
+            </div>
+    </div>
+</div>
+    <div id="navbar-full">
+        <div id="navbar">
+            <div class="navigation-example">
+<!--                 transparent navbar -->
+                <nav class="navbar navbar-ct-transparent" role="navigation-demo">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Transparent</a>
+                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navigation-example-2">
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-->
+                </nav>
+
+<!--                  default navbar -->
+                <nav class="navbar navbar-default" role="navigation-demo">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Default</a>
+                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navigation-example-2">
+                      <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="btn btn-simple">Link</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="btn btn-fill">Button</a>
+                        </li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-->
+                </nav>
+
+<!--                  primary navbar -->
+                <nav class="navbar navbar-ct-primary" role="navigation-demo">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Primary</a>
+                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navigation-example-2">
+                    <ul class="nav navbar-nav">
+                        <a href="#" class="btn btn-primary btn-simple">Link</a>
+                        <a href="#" target="_blank" class="btn btn-primary btn-fill">Button</a>
+
+                    </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-->
+                </nav>
+
+<!--                     info navbar -->
+                <nav class="navbar navbar-ct-info" role="navigation-demo">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Info</a>
+                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navigation-example-2">
+                    <ul class="nav navbar-nav">
+                        <a href="#" class="btn btn-info btn-simple">Link</a>
+                        <a href="#" target="_blank" class="btn btn-info btn-fill">Button</a>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-->
+                </nav>
+
+<!--                     success navbar -->
+                <nav class="navbar navbar-ct-success" role="navigation-demo">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Success</a>
+                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navigation-example-2">
+                    <ul class="nav navbar-nav">
+                        <a href="#" class="btn btn-success btn-simple">Link</a>
+                        <a href="#" target="_blank" class="btn btn-success btn-fill">Button</a>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-->
+                </nav>
+
+<!--                     warning navbar -->
+                <nav class="navbar navbar-ct-warning" role="navigation-demo">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Warning</a>
+                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navigation-example-2">
+                    <ul class="nav navbar-nav">
+                        <a href="#" class="btn btn-warning btn-simple">Link</a>
+                        <a href="#" target="_blank" class="btn btn-warning btn-fill">Button</a>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-->
+                </nav>
+
+<!--                     danger navbar -->
+                <nav class="navbar navbar-ct-danger" role="navigation-demo">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Danger</a>
+                    </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navigation-example-2">
+                    <ul class="nav navbar-nav">
+                        <a href="#" class="btn btn-danger btn-simple">Link</a>
+                        <a href="#" target="_blank" class="btn btn-danger btn-fill">Button</a>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    Email
+                                </a>
+                            </li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-->
+                </nav>
+
+
+
+            </div><!--  navigation example -->
+        </div> <!-- end #navbar -->
+    </div> <!-- end navbar-full -->
+<div class="wrapper">
+    <div class="main">
+        <div class="section section-nude">
+        <div class="container tim-container">
+             <div id="sliders-navigation">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tim-title">
+                            <h3>Progress Bars</h3>
+                        </div>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-success" style="width: 35%">
+                            <span class="sr-only">35% Complete (success)</span>
+                          </div>
+                          <div class="progress-bar progress-bar-warning" style="width: 20%">
+                            <span class="sr-only">20% Complete (warning)</span>
+                          </div>
+                          <div class="progress-bar progress-bar-danger" style="width: 10%">
+                            <span class="sr-only">10% Complete (danger)</span>
+                          </div>
+                        </div>
+                        <div class="tim-title">
+                            <h3>Sliders</h3>
+                        </div>
+                        <div id="slider-default" class="slider-info"></div>
+                        <br>
+                        <div id="slider-range" class="slider-success"></div>
+
+                    </div> <!-- progress bar -->
+
+                    <div class="col-md-6">
+                         <div class="tim-title">
+                            <h3>Navigation Menu</h3>
+                        </div>
+<!--                         We added two wrappers with the classes "nav-tabs-navigation" and "nav-tabs-wrapper" so the name of the tabs can be aligned to the center of the container they're placed in -->
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                                <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                                <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                            </ul>
                             </div>
                         </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
+                        <div id="my-tab-content" class="tab-content text-center">
+                            <div class="tab-pane active" id="home">
+                                <p>Here is information about home.</p>
                             </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
+                            <div class="tab-pane" id="profile">
+                                <p>Here is your profile.</p>
                             </div>
+                            <div class="tab-pane" id="messages">
+                                <p>Here are your messages.</p>
+                            </div>
+                        </div>
+                        <br />
+
+                        <ul class="nav nav-pills nav-pills-danger" role="tablist">
+                              <li class="active">
+                                <a href="#info" role="tab" data-toggle="tab">
+                                     Info
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#description" role="tab" data-toggle="tab">
+                                     Menu
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#concept" role="tab" data-toggle="tab">
+                                     Concept
+                                </a>
+                              </li>
+                        </ul>
+                        <br />
+                        <div class="tim-title">
+                            <h3>Pagination</h3>
+                        </div>
+                        <ul class="pagination pagination-danger">
+                         <!--   color-classes: "pagination-primary", "pagination-info", "pagination-success", "pagination-warning", "pagination-danger"
+                         -->
+                          <li><a href="javascript:void(0);">&laquo;</a></li>
+                          <li><a href="javascript:void(0);">1</a></li>
+                          <li><a href="javascript:void(0);">2</a></li>
+                          <li class="active"><a href="javascript:void(0);">3</a></li>
+                          <li><a href="javascript:void(0);">4</a></li>
+                          <li><a href="javascript:void(0);">5</a></li>
+                          <li><a href="javascript:void(0);">&raquo;</a></li>
+                        </ul>
+
+                    </div> <!-- navigation menu -->
+                </div>
+            </div><!--  end sliders-navigation -->
+
+
+            <div id="labels-badges">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tim-title">
+                            <h3>Labels </h3>
+                        </div>
+                        <span class="label label-default">Default</span>
+                        <span class="label label-primary">Primary</span>
+                        <span class="label label-info">Info</span>
+                        <span class="label label-success">Success</span>
+                        <span class="label label-warning">Warning</span>
+                        <span class="label label-danger">Danger</span>
+
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end labels-badges -->
+            <br>
+            <div class="tim-title">
+                <h3>Notifications</h3>
+            </div>
+
+        </div> <!-- end container -->
+
+        </div>
+    </div> <!-- end main -->
+
+    <div id="notifications">
+        <div class="alert alert-info">
+            <div class="container">
+            <b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </div>
+        <div class="alert alert-success">
+            <div class="container">
+            <b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </div>
+        <div class="alert alert-warning">
+             <div class="container">
+                 <b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </div>
+        <div class="alert alert-danger">
+             <div class="container">
+                 <b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div><!--  end notifications -->
+
+    <div class="main">
+        <div class="section section-nude">
+            <div class="container tim-container">
+                <div class="tim-title">
+                    <h2>Typography</h2>
+                </div>
+                <div id="typography">
+                    <div class="row">
+                        <div class="tim-typo">
+                            <h1><span class="tim-note">Header 1</span>Thinking in textures </h1>
+                        </div>
+                        <div class="tim-typo">
+                            <h2><span class="tim-note">Header 2</span>Thinking in textures</h2>
+                        </div>
+                        <div class="tim-typo">
+                            <h3><span class="tim-note">Header 3</span>Thinking in textures</h3>
+                        </div>
+                        <div class="tim-typo">
+                            <h4><span class="tim-note">Header 4</span>Thinking in textures</h4>
+                        </div>
+                        <div class="tim-typo">
+                            <h5><span class="tim-note">Header 5</span>Thinking in textures</h5>
+                        </div>
+                         <div class="tim-typo">
+                            <h6><span class="tim-note">Header 6</span>Thinking in textures</h6>
+                        </div>
+                        <div class="tim-typo">
+                            <p><span class="tim-note">Paragraph</span>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                        </div>
+                        <div class="tim-typo">
+                            <span class="tim-note">Quote</span>
+                            <blockquote>
+                             <p>
+                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                             </p>
+                             <small>
+                             Steve Jobs, CEO Apple
+                             </small>
+                            </blockquote>
+                        </div>
+
+                        <div class="tim-typo">
+                            <span class="tim-note">Muted Text</span>
+                            <p class="text-muted">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt...                        </p>
+                        </div>
+                        <div class="tim-typo">
+                            <span class="tim-note">Primary Text</span>
+                            <p class="text-primary">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt...                        </p>
+                        </div>
+                        <div class="tim-typo">
+                            <span class="tim-note">Info Text</span>
+                            <p class="text-info">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt...                        </p>
+                        </div>
+                        <div class="tim-typo">
+                            <span class="tim-note">Success Text</span>
+                            <p class="text-success">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt...                        </p>
+                        </div>
+                        <div class="tim-typo">
+                            <span class="tim-note">Warning Text</span>
+                            <p class="text-warning">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt...
+                            </p>
+                        </div>
+                        <div class="tim-typo">
+                            <span class="tim-note">Danger Text</span>
+                            <p class="text-danger">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt...                        </p>
+                        </div>
+                        <div class="tim-typo">
+                            <h2><span class="tim-note">Small Tag</span>Header with small subtitle <br><small>".small" is a tag for the headers</small> </h2>
                         </div>
                     </div>
                 </div>
+                <!--   end typography -->
+                <div class="space"></div>
+                <div id="images">
+                     <div class="tim-title">
+                        <h2>Images</h2>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-6 col-md-3">
+                            <h4>Rounded Image</h4>
+                            <img src="assets/paper_img/thinking_in_textures.png" alt="Rounded Image" class="img-rounded img-responsive">
+                            <div class="img-details">
+                                <div class="author">
+                                    <img src="assets/paper_img/chet_faker_1.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                </div>
+                                <p>Chet Faker</p>
+                            </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+                        </div>
+                        <div class="col-xs-6  col-sm-3 col-md-2 col-md-offset-1">
+                            <h4>Circle Image</h4><br />
+                            <img src="assets/paper_img/placeholder.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                            <p class="text-center">Placeholder</p>
+                        </div>
+                        <div class="col-xs-6  col-sm-3 col-md-2 col-md-offset-1">
+                            <h4>Thumbnail</h4><br />
+                            <img src="assets/paper_img/chet_faker_2.jpg" alt="Thumbnail Image" class="img-thumbnail img-responsive">
+                            <p class="text-center">Chet Faker</p>
                         </div>
                     </div>
+                    <div class="row">
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    </div>
+                </div>
+            <!--   end images -->
+
+            </div><!-- end container -->
+        </div>
+        <div class="section section-dark-blue">
+            <div class="container">
+                <div class="tim-title">
+                    <h2>Javascript components</h2>
+                </div>
+
+                <div class="row" id="modals">
+                    <div class="col-md-6">
+                        <div class="tim-title">
+                            <h3>Modal</h3>
+                        </div>
+
+                        <!-- Button trigger modal, modals must be placed outside the global wrapper -->
+                        <button class="btn btn-neutral" data-toggle="modal" data-target="#myModal">
+                          Launch demo modal
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tim-title">
+                            <h3>Tooltips</h3>
+                        </div>
+                        <button type="button" class="btn btn-neutral btn-tooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">On left</button>
+
+                        <button type="button" class="btn btn-neutral btn-tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">On top</button>
+
+                        <button type="button" class="btn btn-neutral btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">On bottom</button>
+
+                        <button type="button" class="btn btn-neutral btn-tooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">On right</button>
+                    </div>
+                    <div class="clearfix"></div><br><br>
+                <!--     end tooltips -->
+                <div class="col-md-6">
+                    <div class="tim-title">
+                        <h3>Datepicker</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input class="datepicker form-control" type="text"/>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                        <div class="tim-title">
+                            <h3>Popovers</h3>
+                        </div>
+                        <button type="button" class="btn btn-neutral" data-toggle="popover" data-placement="left" title="Popover on left" data-content="Here will be some very useful information about his popover.<br> Here will be some very useful information about his popover." data-html="true">On left</button>
+                        <button type="button" class="btn btn-neutral" data-toggle="popover" data-placement="top" title="Popover on top" data-content="Here will be some very useful information about his popover.">On top</button>
+                        <button type="button" class="btn btn-neutral" data-toggle="popover" data-placement="bottom" title="Popover on bottom" data-content="Here will be some very useful information about his popover.">On bottom</button>
+
+                        <button type="button" class="btn btn-neutral" data-toggle="popover" data-placement="right" title="Popover on right" data-content="Here will be some very useful information about his popover.">On right</button>
+
+                    </div>
+                    <div class="clearfix"></div><br><br>
+                </div><!--  end row -->
+
+                <div class="tim-title">
+                    <h3>Carousel</h3>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end main -->
+
+    <div id="carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="carousel slide" data-ride="carousel">
+
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="assets/paper_img/pencils.jpg" alt="Awesome Image">
+                </div>
+                <div class="item">
+                  <img src="assets/paper_img/shoes.jpg" alt="Awesome Image">
+                </div>
+                <div class="item">
+                  <img src="assets/paper_img/types.jpg" alt="Awesome Image">
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="fa fa-angle-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="fa fa-angle-right"></span>
+              </a>
+        </div>
+    </div> <!-- end carousel -->
+
+</div> <!-- end wrapper -->
+
+    <!-- </div> -->
+    <div class="main">
+        <div class="section section-white section-with-space">
+            <div class="container tim-container text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h2>Completed with examples</h2>
+                        <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful kit.</p>
+                    </div>
+                </div>
+                <div class="row example-pages">
+                    <div class="col-md-4">
+                        <a href="examples/landing.html" target="_blank">
+                            <img src="assets/paper_img/examples/landing.jpg" alt="Rounded Image" class="img-rounded img-responsive">
+                            <h5>Landing Page</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="examples/register.html" target="_blank">
+                            <img src="assets/paper_img/examples/register.jpg" alt="Rounded Image" class="img-rounded img-responsive">
+                            <h5>Register</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="examples/profile.html" target="_blank">
+                            <img src="assets/paper_img/examples/profile.jpg" alt="Rounded Image" class="img-rounded img-responsive">
+                            <h5>Profile</h5>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+        <div class="section section-nude section-with-space">
+            <div class="container tim-container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h2>Do you like what you see?</h2>
+                        <p>Cause if you do, it can be yours for free. Hit the button below to navigate to Creative Tim where you can find the kit. Start a new project or give an old Bootstrap project a new look, we've got you covered. </p>
+                    </div>
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 download-area">
+                        <a href="http://www.creative-tim.com/product/paper-kit" class="btn btn-danger btn-fill btn-block btn-lg">Download</a>
+                    </div>
+                </div>
+                <div class="row sharing-area text-center">
+                        <h3>Sharing is caring!</h3>
+                        <a href="#" class="btn">
+                            <i class="fa fa-twitter"></i>
+                            Twitter
+                        </a>
+                        <a href="#" class="btn">
+                            <i class="fa fa-facebook-square"></i>
+                            Facebook
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-demo section-dark">
+    <div class="container">
+        <nav class="pull-left">
+            <ul>
+
+                <li>
+                    <a href="http://www.creative-tim.com">
+                        Creative Tim
+                    </a>
+                </li>
+                <li>
+                    <a href="http://blog.creative-tim.com">
+                       Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.creative-tim.com/product/rubik">
+                        Licenses
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="copyright pull-right">
+            &copy; 2015, made with <i class="fa fa-heart heart"></i> by Creative Tim
+        </div>
+    </div>
+</footer>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. </p>
+      </div>
+      <div class="modal-footer">
+        <div class="left-side">
+            <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Never mind</button>
+        </div>
+        <div class="divider"></div>
+        <div class="right-side">
+            <button type="button" class="btn btn-danger btn-simple">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--    end modal -->
+
+
+</body>
+
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+	<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+
+	<!--  Plugins -->
+	<script src="assets/js/ct-paper-checkbox.js"></script>
+	<script src="assets/js/ct-paper-radio.js"></script>
+	<script src="assets/js/bootstrap-select.js"></script>
+	<script src="assets/js/bootstrap-datepicker.js"></script>
+
+	<script src="assets/js/ct-paper.js"></script>
 </html>
