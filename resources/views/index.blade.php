@@ -104,7 +104,7 @@
     <footer class="footer footer-big footer-color-black" data-color="black">
             <hr>
             <div class="copyright">
-                 © 2023 Made With Love, Salma Nora Renada
+                 © 2023 Coded by <a href="https://renyaw.github.io/" class="text-primary">Salma Nora Renada</a>
                  <br>
                  KKN TIM II Universitas Diponegoro
             </div>
