@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="img/logo_klaten.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Besa Bogor
+    Desa Bogor
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -127,25 +127,17 @@
               </p>
             </div>
           </div>
+          <br>
           <div class="row">
             <div class="col-md-5">
               <!-- Second image on the left side of the article -->
               <h3>Kelompok Wanita Tani</h3>
               <hr>
-              <p>Di Desa Bogor, terdapat beberapa organisasi dan komunitas, salah satunya adalah Kelompok Wanita Tani (KWT)
+              <p>Di Desa Bogor, terdapat beberapa organisasi dan komunitas, salah satunya adalah Kelompok Wanita Tani (KWT). Kelompok Wanita Tani (KWT) adalah kelompok tani yang anggotanya para perempuan yang melaksanakan usaha di bidang pertanian. Kegiatan yang dilakukan oleh KWT dapat berupa budidaya pertanian di pekarangan dan pengolahan hasil.
               </p>
 
               <p>
-                Geti memiliki rasa manis yang pas (tidak terlalu manis), perpaduan wijen yang sangat pas, sehingga cocok untuk menjadi teman minum teh di sore maupun pagi hari. Khasiat dari Geti pun tidak perlu diragukan lagi, karena wijen memiliki berbagai macam khasiat untuk tubuh, diantaranya :
-                <ul>
-                    <li> <p>Menurunkan kadar kolesterol darah total dengan menurunkan low-density lipoprotein (LDL) atau kolesterol jahat, karena memiliki kadar serat yang tinggi</p> </li>
-                    <li> <p>Membangun dan menjaga fungsi sel</p></li>
-                    <li> <p>Menyehatkan tulang</p></li>
-                    <li> <p>Mengurangi peradangan</p></li>
-                    <li> <p>Mengontrol gula darah</p></li>
-                </ul>
-              <p>
-              Dari khasiat yang dimiliki, Geti merupakan cemilan sehat dengan harga yang terjangkau.
+                KWT di Desa Bogor, memiliki berbagai macam produk olahan, diantaranya adalah keripik sayuran dan olahan singkong yang bernama TellMy. Seperti yang telah disebutkan sebelumnya, TellMy adalah produk olahan berbahan dasar singkong yang diberi susu dan keju sehingga menghasilkan olahan singkong yang mirip dengan puding.
               </p>
             </div>
             <div class="col-md-6">
@@ -207,29 +199,23 @@
         <nav>
           <ul>
             <li>
-              <a href="https://www.creative-tim.com">
-                Creative Tim
-              </a>
+                KKN TIM II
             </li>
             <li>
               <a href="http://presentation.creative-tim.com">
-                About Us
+                Universitas Diponegoro
               </a>
             </li>
             <li>
               <a href="http://blog.creative-tim.com">
-                Blog
+                2023
               </a>
             </li>
           </ul>
         </nav>
         <div class="copyright" id="copyright">
-          &copy;
-          <script>
-            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-          </script>, Designed by
-          <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-          <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+          Coded by
+          <a href="https://renyaw.github.io/" target="_blank">Salma Nora Renada</a>.
         </div>
       </div>
     </footer>

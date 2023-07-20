@@ -25,3 +25,6 @@ Route::get('welcome', function () {
 Route::get('homepage', function () {
     return view('homepage');
 });
+Route::get('login', function () {
+    return view('login');
+});
