@@ -77,35 +77,84 @@
   <!-- End Navbar -->
   <div class="page-header clear-filter" filter-color="orange">
     <div class="page-header-image" style="background-image:url(img/sawah.jpg)"></div>
-    <div class="content">
+    <div class="mt-5">
       <div class="container">
         <div class="col-md-4 ml-auto mr-auto">
           <div class="card card-login card-plain">
             <form class="form" method="" action="">
               <div class="card-body">
                 <div class="input-group no-border input-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="now-ui-icons text_caps-small"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="NIK">
+                  </div>
+                <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="now-ui-icons users_circle-08"></i>
+                      <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control" placeholder="Nama Lengkap">
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="now-ui-icons users_circle-08"></i>
+                      <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control" placeholder="Tempat Lahir (Isikan tanggal di bawah)">
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="now-ui-icons users_circle-08"></i>
+                      <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="date" class="form-control" placeholder="Tanggal Lahir">
+                </div>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Nomor Telepon">
+                </div>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                    <select class="form-control" name="dusun" id="dusun" value="{{old('dusun')}}">
+                        <option value="0">Pilih Dukuh</option>
+
+                    </select>
+                </div>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                    <select class="form-control" name="RW" id="rw" value="{{old('rw')}}">
+                        <option value="0">Pilih RW</option>
+
+                    </select>
+                </div>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                    <select class="form-control" name="RT" id="rt" value="{{old('rt')}}">
+                        <option value="0">Pilih RT</option>
+
+                    </select>
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -121,23 +170,30 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" placeholder="Password" class="form-control" />
+                  <input type="password" placeholder="Password" class="form-control" />
                 </div>
-              </div>
-              <div class="card-footer text-center">
-                <a href="#pablo" class="btn btn-primary btn-round btn-lg btn-block">Login</a>
-                <div class="pull-right">
-                  <h6>
-                    <a href="#pablo" class="link">Create Account</a>
-                  </h6>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                  <input type="password" placeholder="Konfirmasi Password" class="form-control" />
                 </div>
+                    <button type="submit" name="submit" value="submit" class="btn btn-primary btn-round btn-lg btn-block">Daftar</button>
+                    <div class="pull-right">
+                        <h6>
+                          <a href="#pablo" class="link">Create Account</a>
+                        </h6>
+                </div>
+            </div>
             </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <footer class="footer">
+
+    <footer class="footer mt-3">
       <div class=" container ">
         <nav>
           <ul>
