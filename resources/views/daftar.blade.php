@@ -124,10 +124,7 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                    <select class="form-control" name="dusun" id="dusun" value="{{old('dusun')}}">
-                        <option value="0">Pilih Dukuh</option>
-
-                    </select>
+                  <input type="text" class="form-control" placeholder="Dukuh">
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -135,11 +132,10 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                    <select class="form-control" name="RT" id="rt" value="{{old('rt')}}">
-                        <option value="0">Pilih RT</option>
-
-                    </select>
+                  <input type="number" class="form-control" placeholder="RT">
                 </div>
+
+
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
