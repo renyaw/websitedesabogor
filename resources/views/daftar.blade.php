@@ -32,11 +32,6 @@
           <a class="dropdown-header">Dropdown header</a>
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">One more separated link</a>
         </div>
       </div>
       <div class="navbar-translate">
@@ -131,17 +126,6 @@
                   </div>
                     <select class="form-control" name="dusun" id="dusun" value="{{old('dusun')}}">
                         <option value="0">Pilih Dukuh</option>
-
-                    </select>
-                </div>
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="now-ui-icons text_caps-small"></i>
-                    </span>
-                  </div>
-                    <select class="form-control" name="RW" id="rw" value="{{old('rw')}}">
-                        <option value="0">Pilih RW</option>
 
                     </select>
                 </div>
