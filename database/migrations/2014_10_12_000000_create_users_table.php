@@ -31,6 +31,24 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::create('status', function (Blueprint $table) {
+            $table->id('id_status');
+            $table->string('proses');
+            $table->timestamps();
+        });
+
+        Schema::create('antre_bbm', function (Blueprint $table) {
+            $table->id('id_bbm')->autoIncrement();
+            $table->string('ktp_bbm');
+            $table->string('lokasi');
+            $table->string('lama_usaha');
+            $table->string('foto_usaha');
+            // $table->date('tgl_antre_dom')->useCurrent();
+            $table->unsignedBigInteger('fk_id_user');
+            $table->unsignedBigInteger('fk_status');
+            $table->timestamps();
+        });
     }
 
     /**
