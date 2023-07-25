@@ -10,6 +10,7 @@ class userModel extends Model
     use HasFactory;
 
     protected $table = 'users';
+    protected $guarded = [];
 
     public function antrean_bbm()
     {

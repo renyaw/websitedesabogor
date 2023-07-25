@@ -16,22 +16,14 @@ use App\Http\Controllers\loginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('beranda', function () {
-    return view('beranda');
-});
+Route::resource('/', indexController::class);
+Route::resource('beranda', berandaController::class);
+Route::resource('daftar', daftarController::class);
+Route::resource('homepage', homepageController::class);
 Route::get('welcome', function () {
     return view('welcome');
 });
-Route::get('homepage', function () {
-    return view('homepage');
-});
-Route::get('login', function () {
-    return view('login');
-});
-Route::get('daftar', function () {
-    return view('daftar');
-});
+
+
+Route::get('login', [loginController::class, 'index']);
+Route::post('login', [loginController::class, 'store']);

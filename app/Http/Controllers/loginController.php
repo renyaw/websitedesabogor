@@ -38,7 +38,18 @@ class loginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials = $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('berandaMasy');
+        }
+
+        return back()->with('Lerror', 'Tidak Berhasil Login!');
     }
 
     /**

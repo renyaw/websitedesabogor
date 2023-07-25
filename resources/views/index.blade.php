@@ -61,7 +61,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="http://www.creative-tim.com/product/gaia-bootstrap-template" class="btn btn-danger btn-fill">Masuk</a>
+                        <a href="login" class="btn btn-danger btn-fill">Masuk</a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +81,7 @@
                         <p class="">Selamat Datang! </p>
                         <div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            Masuk untuk melakukan pengajuan permohonan administrasi masyarakat!
+                            Masuk untuk melakukan pengajuan surat pengantar pembelian BBM!
                         </div>
                         <h1 class="title-modern text-success">Desa Bogor</h1>
                         <h3 class="text-warning">Kecamatan Cawas, Kabupaten Klaten</h2>
@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="button-get-started">
-                        <a href="homepage" target="_blank" class="btn btn-danger btn-fill btn-lg ">
+                        <a href="homepage" class="btn btn-danger btn-fill btn-lg ">
                             Homepage
                         </a>
                     </div>

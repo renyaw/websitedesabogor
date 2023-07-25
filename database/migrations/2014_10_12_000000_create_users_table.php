@@ -38,7 +38,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('antre_bbm', function (Blueprint $table) {
+        Schema::create('antrean_bbm', function (Blueprint $table) {
             $table->id('id_bbm')->autoIncrement();
             $table->string('ktp_bbm');
             $table->string('lokasi');

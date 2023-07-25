@@ -75,17 +75,55 @@
   </nav>
 
   <!-- End Navbar -->
+
   <div class="page-header clear-filter" filter-color="orange">
     <div class="page-header-image" style="background-image:url(img/sawah.jpg)"></div>
     <div class="content">
       <div class="container">
+
         <div class="col-md-4 ml-auto mr-auto">
           <div class="card card-login card-plain">
-            <form class="form" method="" action="">
+            <form name="login" method="POST" autocomplete="off" action="/login">
+            @csrf
               <div class="card-header text-center">
                 <div class="logo-container">
                   <img src="img/logo_klaten.png" alt="">
                 </div>
+                {{-- Alert dari daftar --}}
+                @if(session()->has('status'))
+                <div class="alert alert-success" role="alert">
+                    <div class="container">
+                      <div class="alert-icon">
+                        <i class="now-ui-icons ui-2_like"></i>
+                      </div>
+                      {{session('status')}}
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">
+                          <i class="now-ui-icons ui-1_simple-remove"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                @endif
+                {{-- End --}}
+
+                {{--    Alert from Login --}}
+                @if(session()->has('Lerror'))
+                <div class="alert alert-success" role="alert">
+                    <div class="container">
+                      <div class="alert-icon">
+                        <i class="now-ui-icons ui-2_like"></i>
+                      </div>
+                      {{session('Lerror')}}
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">
+                          <i class="now-ui-icons ui-1_simple-remove"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                @endif
+                {{-- End --}}
               </div>
               <div class="card-body">
                 <div class="input-group no-border input-lg">
@@ -102,14 +140,14 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" placeholder="Password" class="form-control" />
+                  <input type="password" placeholder="Password" class="form-control" />
                 </div>
               </div>
               <div class="card-footer text-center">
-                <a href="#pablo" class="btn btn-primary btn-round btn-lg btn-block">Login</a>
+                <input type="submit" class="btn btn-primary btn-round btn-lg btn-block" name="submit" id="submit" value="Masuk"/>
                 <div class="pull-right">
                   <h6>
-                    <a href="#pablo" class="link">Create Account</a>
+                    <a href="daftar" class="link">Buat Akun</a>
                   </h6>
                 </div>
             </form>

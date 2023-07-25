@@ -1,13 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
+
 use App\Models\userModel;
 use App\Models\antreanBbmModel;
 use App\Models\statusModel;
 
-use Illuminate\Support\Facades\Auth;
+
+
 class daftarController extends Controller
 {
     /**
@@ -17,7 +20,8 @@ class daftarController extends Controller
      */
     public function index()
     {
-        return view('/daftar');
+        $data = userModel::all();
+        return view('daftar', compact('data'));
     }
 
     /**
@@ -38,7 +42,24 @@ class daftarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate
+        $validated = $request->validate([
+            'nik' => 'required|unique:users|max:16|min:16',
+            'nama' => 'required|max:255',
+            'tempat_lahir' => 'required',
+            'tgl_lahir' => 'required|date',
+            'no_telp' => 'required',
+            'dukuh' => 'required',
+            'rw' => 'required',
+            'rt' => 'required',
+            'username' => 'required|unique:users|min:5',
+            'password' => 'min:6|confirmed|max:255',
+        ]);
+
+        $validated['password'] = Hash::make($validated['password']);
+        userModel::create($validated);
+
+        return redirect('/login')->with('status', 'Akun Anda Berhasil Dibuat! Silahkan Melakukan Login!');
     }
 
     /**

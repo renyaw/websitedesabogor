@@ -76,7 +76,8 @@
       <div class="container">
         <div class="col-md-4 ml-auto mr-auto">
           <div class="card card-login card-plain">
-            <form class="form" method="" action="">
+            <form method="POST" autocomplete="on" name="form" onsubmit="" action="/daftar">
+            @csrf
               <div class="card-body">
                 <div class="input-group no-border input-lg">
                     <div class="input-group-prepend">
@@ -84,7 +85,11 @@
                         <i class="now-ui-icons text_caps-small"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="NIK">
+                    <input type="text" class="form-control  @error('nik')
+                    is-invalid @enderror" placeholder="NIK" id="nik" name="nik" value="{{old('nik')}}">
+                    @error('nik')
+                    <div class="invalid-feedback">{{$message}}</div>
+                    @enderror
                   </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -92,7 +97,11 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Nama Lengkap">
+                  <input type="text" class="form-control  @error('nama')
+                  is-invalid @enderror" placeholder="Nama Lengkap" id="nama" name="nama" value="{{old('nama')}}">
+                  @error('nama')
+                  <div class="invalid-feedback">{{$message}}</div>
+                  @enderror
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -100,7 +109,11 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Tempat Lahir (Isikan tanggal di bawah)">
+                  <input type="text" class="form-control  @error('tempat_lahir')
+                  is-invalid @enderror" placeholder="Tempat Lahir (Isikan tanggal di bawah)" id="tempat_lahir" name="tempat_lahir" value="{{old('tempat_lahir')}}">
+                  @error('tempat_lahir')
+                  <div class="invalid-feedback">{{$message}}</div>
+                 @enderror
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -108,7 +121,11 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="date" class="form-control" placeholder="Tanggal Lahir">
+                  <input type="date" class="form-control  @error('tanggal_lahir')
+                  is-invalid @enderror" placeholder="Tanggal Lahir" id="tgl_lahir" name="tgl_lahir" value="{{old('tgl_lahir')}}">
+                  @error('tgl_lahir')
+                  <div class="invalid-feedback">{{$message}}</div>
+                  @enderror
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -116,7 +133,11 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Nomor Telepon">
+                  <input type="text" class="form-control  @error('no_telp')
+                  is-invalid @enderror" placeholder="Nomor Telepon" id="no_telp" name="no_telp" value="{{old('no_telp')}}">
+                  @error('no_telp')
+                  <div class="invalid-feedback">{{$message}}</div>
+                  @enderror
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -124,7 +145,11 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Dukuh">
+                  <input type="text" class="form-control @error('dukuh')
+                  is-invalid @enderror" placeholder="Dukuh" id="dukuh" name="dukuh" value="{{old('dukuh')}}">
+                  @error('dukuh')
+                  <div class="invalid-feedback">{{$message}}</div>
+                  @enderror
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -132,7 +157,23 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="number" class="form-control" placeholder="RT">
+                  <input type="number" class="form-control @error('rw')
+                  is-invalid @enderror" placeholder="RW" id="rw" name="rw" value="{{old('rw')}}">
+                  @error('rw')
+                  <div class="invalid-feedback">{{$message}}</div>
+                  @enderror
+                </div>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                  <input type="number" class="form-control @error('rt')
+                  is-invalid @enderror" placeholder="RT" id="rt" name="rt" value="{{old('rt')}}">
+                  @error('rt')
+                  <div class="invalid-feedback">{{$message}}</div>
+                  @enderror
                 </div>
 
 
@@ -142,7 +183,11 @@
                       <i class="now-ui-icons users_circle-08"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control @error('username')
+                  is-invalid @enderror" placeholder="Username" id="username" name="username" value="{{old('username')}}">
+                  @error('username')
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
@@ -150,20 +195,26 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="password" placeholder="Password" class="form-control" />
-                </div>
+                  <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password"  placeholder="Masukkan Password" />
+                  @error('password')
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
+        </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="password" placeholder="Konfirmasi Password" class="form-control" />
+                  <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation" name="password_confirmation" placeholder="Masukkan Ulang Password" />
+                  @error('password_confirmation')
+                    <div class="invalid-feedback">{{$message}}</div>
+                @enderror
                 </div>
                     <button type="submit" name="submit" value="submit" class="btn btn-primary btn-round btn-lg btn-block">Daftar</button>
                     <div class="pull-right">
                         <h6>
-                          <a href="#pablo" class="link">Create Account</a>
+                          <a href="login" class="link">Masuk</a>
                         </h6>
                 </div>
             </div>
