@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\berandaController;
+use App\Http\Controllers\daftarController;
+use App\Http\Controllers\homepageController;
+use App\Http\Controllers\indexController;
+use App\Http\Controllers\loginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
