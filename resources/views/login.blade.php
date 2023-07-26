@@ -132,7 +132,7 @@
                       <i class="now-ui-icons users_circle-08"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="Username">
+                  <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" autofocus placeholder="Username">
                 </div>
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
