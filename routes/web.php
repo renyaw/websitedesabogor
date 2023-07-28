@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\berandaController;
 use App\Http\Controllers\daftarController;
 use App\Http\Controllers\homepageController;
+use App\Http\Controllers\berandaMasyController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\loginController;
 /*
@@ -20,6 +21,7 @@ Route::resource('/', indexController::class);
 Route::resource('beranda', berandaController::class);
 Route::resource('daftar', daftarController::class);
 Route::resource('homepage', homepageController::class);
+Route::resource('berandaMasy', berandaMasyController::class);
 Route::get('welcome', function () {
     return view('welcome');
 });
