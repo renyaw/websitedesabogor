@@ -140,7 +140,7 @@
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="password" placeholder="Password" class="form-control" />
+                  <input type="password" placeholder="Password" class="form-control" id="password" name="password"/>
                 </div>
               </div>
               <div class="card-footer text-center">

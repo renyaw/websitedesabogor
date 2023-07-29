@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\userModel;
-use App\Models\antreanBbmModel;
-use App\Models\statusModel;
 
 use Illuminate\Support\Facades\Auth;
 class loginController extends Controller
