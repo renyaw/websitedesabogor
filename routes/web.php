@@ -32,7 +32,8 @@ Route::post('login', [loginController::class, 'store']);
 
 // Masyarakat
 Route::resource('beranda', berandaController::class);
-Route::resource('berandaMasy', berandaMasyController::class);
+Route::resource('berandaMasy', berandaMasyController::class)->middleware(['auth', 'isMasyarakat']);
+Route::resource('formBBM', formBBMController::class)->middleware(['auth', 'isMasyarakat']);
 
 
 // Perangkat
