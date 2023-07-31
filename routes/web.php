@@ -7,6 +7,7 @@ use App\Http\Controllers\homepageController;
 use App\Http\Controllers\berandaMasyController;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\dashPerangkatController;
 
 use App\Http\Middleware\isPerangkat;
 use App\Http\Middleware\isMasyarakat;
@@ -37,6 +38,7 @@ Route::resource('formBBM', formBBMController::class)->middleware(['auth', 'isMas
 
 
 // Perangkat
+Route::resource('dashPerangkat', dashPerangkatController::class);
 
 
 
