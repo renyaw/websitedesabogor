@@ -44,10 +44,17 @@ return new class extends Migration
             $table->string('lokasi');
             $table->string('lama_usaha');
             $table->string('foto_usaha');
+            $table->string('spbu');
             // $table->date('tgl_antre_dom')->useCurrent();
             $table->unsignedBigInteger('fk_id_user');
             $table->unsignedBigInteger('fk_status');
             $table->timestamps();
+        });
+
+        // Foreign Key
+        Schema::table('antrean_bbm', function (Blueprint $table) {
+            $table->foreign('fk_id_user')->references('id')->on('users');
+            $table->foreign('fk_status')->references('id_status')->on('status');
         });
     }
 

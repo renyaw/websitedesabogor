@@ -9,7 +9,8 @@ class antreanBbmModel extends Model
 {
     use HasFactory;
     protected $table = 'antrean_bbm';
-
+    protected $guarded = [];
+    
     public function permohonan_bbm()
     {
         return $this->belongsTo(userModel::class, 'fk_id_user', 'id');

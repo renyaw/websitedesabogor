@@ -9,6 +9,7 @@ use App\Http\Controllers\indexController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\dashPerangkatController;
 use App\Http\Controllers\daftarPemohonController;
+use App\Http\Controllers\profileController;
 
 use App\Http\Middleware\isPerangkat;
 use App\Http\Middleware\isMasyarakat;
@@ -36,6 +37,7 @@ Route::post('logout', [loginController::class, 'logout']);
 // Masyarakat
 Route::resource('beranda', berandaController::class);
 Route::resource('berandaMasy', berandaMasyController::class)->middleware(['auth', 'isMasyarakat']);
+Route::resource('profile', profileController::class)->middleware(['auth', 'isMasyarakat']);
 
 
 // Perangkat
