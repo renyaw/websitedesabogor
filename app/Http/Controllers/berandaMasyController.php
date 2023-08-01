@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\userModel;
+use App\Models\antreanBbmModel;
+use App\Models\statusModel;
 class berandaMasyController extends Controller
 {
     /**
@@ -14,7 +16,8 @@ class berandaMasyController extends Controller
      */
     public function index()
     {
-        return view('/berandaMasy');
+        $query = userModel::find(Auth::user()->id);
+        return view('berandaMasy',compact('query'));
     }
 
     /**
