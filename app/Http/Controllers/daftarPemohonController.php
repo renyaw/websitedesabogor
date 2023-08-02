@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-
+use App\Models\antreanBbmModel;
 class daftarPemohonController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class daftarPemohonController extends Controller
      */
     public function index()
     {
-        return view('/daftarPemohon');
+        $query = antreanBbmModel::all();
+        return view('daftarPemohon',compact('query'));
     }
 
     /**

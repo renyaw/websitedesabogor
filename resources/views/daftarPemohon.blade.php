@@ -109,10 +109,9 @@
     {{-- Konten --}}
     <div class="container-fluid py-4">
       <div class="row">
-        <div class="col-xl col-sm-6 mb-xl-0 mb-4">
-            <div class="container mt-5">
-                <div class="row text-center">
-                </div>
+        <div class="col-xl col-sm-6 mb-xl-0">
+            <div class="container mt-2">
+                <p class="text-center fw-bold text-dark">Daftar Pemohon Surat Pengantar Pembelian BBM</p>
                 <div class="row text-center">
                     <div class="col">
                     <table class="table table-hover table-striped table-info table-bordered">
@@ -120,24 +119,24 @@
                             <th>No</th>
                             <th>NIK</th>
                             <th>Nama</th>
-                            <th>Alamat</th>
+                            <th>Dukuh</th>
                             <th>No Telp</th>
                             <th>Action</th>
                         </tr>
 
 
-                        {{-- @foreach($query as $data)
+                        @foreach($query as $data)
                         <tr>
-                        <td>{{$data->id_dom}}</td>
-                        <td>{{$data->permohonan_dom->nik}}</td>
-                        <td>{{$data->permohonan_dom->nama}}</td>
-                        <td>{{$data->permohonan_dom->alamat}}</td>
-                        <td>{{$data->permohonan_dom->no_telp}}</td>
+                        <td>{{$data->id_bbm}}</td>
+                        <td>{{$data->permohonan_bbm->nik}}</td>
+                        <td>{{$data->permohonan_bbm->nama}}</td>
+                        <td>{{$data->permohonan_bbm->dukuh}}</td>
+                        <td>{{$data->permohonan_bbm->no_telp}}</td>
                         <td>
-                        <a href="{{ url('verifDom/'.$data->id_dom) }}" class="btn btn-warning btn-sm">Lihat Berkas</a>
+                        <a href="{{ url('verifBBM/'.$data->id_bbm) }}" class="btn btn-warning btn-sm">Lihat Berkas</a>
                         </td>
                         </tr>
-                        @endforeach --}}
+                        @endforeach
 
                     </div>
                 </div>

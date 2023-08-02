@@ -85,6 +85,12 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4 px-5">
+        @if(session()->has('berhasil'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{session('berhasil')}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+         @endif
         <p class="text-center fw-bold text-dark">Surat Pengantar Pembelian BBM</p>
         <div class="konten">
             <form action="/berandaMasy" method="POST" autocomplete="on" name="form" enctype="multipart/form-data">
