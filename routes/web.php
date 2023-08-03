@@ -10,6 +10,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\dashPerangkatController;
 use App\Http\Controllers\daftarPemohonController;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\verifBBMController;
 
 use App\Http\Middleware\isPerangkat;
 use App\Http\Middleware\isMasyarakat;
@@ -42,7 +43,8 @@ Route::resource('profile', profileController::class)->middleware(['auth', 'isMas
 
 // Perangkat
 Route::resource('dashPerangkat', dashPerangkatController::class)->middleware(['auth', 'isPerangkat']);
-Route::resource('daftarPemohon', daftarPemohonController::class)->middleware(['auth', 'isPerangkat']);;
+Route::resource('daftarPemohon', daftarPemohonController::class)->middleware(['auth', 'isPerangkat']);
+Route::resource('verifBBM', verifBBMController::class);
 
 
 
