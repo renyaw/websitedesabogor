@@ -50,7 +50,7 @@
                 </div>
               <span class="nav-link-text ms-1">Daftar Pemohon</span>
             </a>
-          </li>
+        </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
@@ -122,6 +122,7 @@
                             <th>Dukuh</th>
                             <th>No Telp</th>
                             <th>Action</th>
+                            <th>Status</th>
                         </tr>
 
 
@@ -135,6 +136,7 @@
                         <td>
                         <a href="{{ url('verifBBM/'.$data->id_bbm) }}" class="btn btn-warning btn-sm">Lihat Berkas</a>
                         </td>
+                        <td>{{$data->antre_stat_dom->proses}}</td>
                         </tr>
                         @endforeach
 
