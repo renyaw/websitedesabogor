@@ -24,16 +24,11 @@
   <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
     <div class="container">
       <div class="dropdown button-dropdown">
-        <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+        <a  class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
           <span class="button-bar"></span>
           <span class="button-bar"></span>
           <span class="button-bar"></span>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-header">Authorization</a>
-          <a class="dropdown-item" href="#">Buat Akun (Daftar)</a>
-          <a class="dropdown-item" href="#">Masuk</a>
-        </div>
       </div>
       <div class="navbar-translate">
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,23 +43,16 @@
             <a class="nav-link" href="/">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-              <i class="fab fa-twitter"></i>
-              <p class="d-lg-none d-xl-none">Twitter</p>
+            <a class="nav-link" rel="tooltip" title="Buat Akun" data-placement="bottom" href="daftar" target="_blank">
+              Daftar
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-              <i class="fab fa-facebook-square"></i>
-              <p class="d-lg-none d-xl-none">Facebook</p>
+            <a class="nav-link" rel="tooltip" title="Masuk" data-placement="bottom" href="login" target="_blank">
+              Masuk
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
-              <i class="fab fa-instagram"></i>
-              <p class="d-lg-none d-xl-none">Instagram</p>
-            </a>
-          </li>
+
         </ul>
       </div>
     </div>

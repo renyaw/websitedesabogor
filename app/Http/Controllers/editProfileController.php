@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\userModel;
-use App\Models\antreanBbmModel;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class dashPerangkatController extends Controller
+use App\Models\userModel;
+
+class editProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,13 +16,8 @@ class dashPerangkatController extends Controller
      */
     public function index()
     {
-        $querybbm = \DB::table('antrean_bbm')
-        ->select([
-            \DB::raw('count(*) as jumlahbbm')
-        ])
-        ->get()
-        ;
-        return view('/dashPerangkat', compact('querybbm'));
+        $query = userModel::find(Auth::user()->id);
+        return view('editProfile',compact('query'));
     }
 
     /**
@@ -76,7 +72,20 @@ class dashPerangkatController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+               // Validate
+               $validated = $request->validate([
+                'nik' => 'required|unique:users|max:16|min:16',
+                'nama' => 'required|max:255',
+                'tempat_lahir' => 'required',
+                'tgl_lahir' => 'required|date',
+                'no_telp' => 'required',
+                'dukuh' => 'required',
+                'rw' => 'required',
+                'rt' => 'required'
+            ]);
+
+
+            return redirect('/profile')->with('status', 'Profil anda berhasil diubah!');
     }
 
     /**

@@ -59,7 +59,8 @@ class profileController extends Controller
      */
     public function edit($id)
     {
-        //
+        $query = userModel::find(Auth::user()->id);
+        return view('editProfile',compact('query'));
     }
 
     /**
@@ -71,7 +72,8 @@ class profileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        userModel::findorfail(auth()->user()->id)->update($request->all());
+        return redirect('/profile')->with('status', 'Profil anda berhasil diubah!');
     }
 
     /**

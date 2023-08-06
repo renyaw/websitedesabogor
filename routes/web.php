@@ -10,6 +10,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\dashPerangkatController;
 use App\Http\Controllers\daftarPemohonController;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\editProfileController;
 use App\Http\Controllers\verifBBMController;
 use App\Http\Controllers\riwayatController;
 
@@ -40,17 +41,17 @@ Route::post('logout', [loginController::class, 'logout']);
 Route::resource('beranda', berandaController::class);
 Route::resource('berandaMasy', berandaMasyController::class)->middleware(['auth', 'isMasyarakat']);
 Route::resource('profile', profileController::class)->middleware(['auth', 'isMasyarakat']);
+Route::resource('editProfile', editProfileController::class)->middleware(['auth', 'isMasyarakat']);
 Route::resource('riwayat', riwayatController::class)->middleware(['auth', 'isMasyarakat']);
 
 
 // Perangkat
 Route::resource('dashPerangkat', dashPerangkatController::class)->middleware(['auth', 'isPerangkat']);
 Route::resource('daftarPemohon', daftarPemohonController::class)->middleware(['auth', 'isPerangkat']);
-Route::resource('verifBBM', verifBBMController::class);
+Route::resource('verifBBM', verifBBMController::class)->middleware(['auth', 'isPerangkat']);
 Route::get('verifBBM/diterima/{id}', [verifBBMController::class, 'diterima'])->middleware(['auth', 'isPerangkat']);
 Route::get('verifBBM/ditolak/{id}', [verifBBMController::class, 'ditolak'])->middleware(['auth', 'isPerangkat']);
 Route::get('verifBBM/kembali/{id}', [verifBBMController::class, 'kembali'])->middleware(['auth', 'isPerangkat']);
-Route::get('verifBBM/download/{id}', [verifBBMController::class, 'download'])->middleware(['auth', 'isPerangkat']);
 
 
 

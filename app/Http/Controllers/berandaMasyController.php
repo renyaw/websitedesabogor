@@ -63,7 +63,7 @@ class berandaMasyController extends Controller
             ]);
             //penyimpanan file ke db
             $data = [
-                'ktp_bbm' => $newNama_ktp,
+                'ktp_bbm' => $newNama_ktp,  
                 'foto_usaha' => $newNama_foto,
                 'lokasi' => $request->lokasi,
                 'lama_usaha' => $request->lama_usaha,

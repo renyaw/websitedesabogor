@@ -44,22 +44,6 @@
                     {{-- <li>
                         <a href="http://www.creative-tim.com/product/gaia-bootstrap-template-pro" target="_blank"></a>
                     </li> --}}
-                    <li class="dropdown">
-                        <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-share-alt"></i> Media Sosial
-                        </a>
-                        <ul class="dropdown-menu dropdown-danger">
-                            <li>
-                                <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li>
                         <a href="login" class="btn btn-danger btn-fill">Masuk</a>
                     </li>
