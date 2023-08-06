@@ -127,7 +127,7 @@
                                         <label for="ktp_bbm">Kartu Tanda Penduduk</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control border ps-2" id="ktp_bbm" name="ktp_bbm" placeholder="Input" value="{{$data->ktp_bbm}}" readonly>
-                                            <a href="{{ url('storage/ktp_bbm/'.$data->ktp_bbm) }}" class="btn btn-secondary" type="button" id="button-addon2">Unduh</a>
+                                            <a href="{{ asset('storage/ktp/'.$data->ktp_bbm) }}" class="btn btn-secondary" type="button" id="button-addon2">Unduh</a>
                                         </div>
                                     </div>
                                     <br>
@@ -135,7 +135,7 @@
                                         <label for="foto_usaha">Foto Usaha</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control border ps-2" id="foto_usaha" name="foto_usaha" placeholder="Lokasi" value="{{$data->foto_usaha}}" readonly>
-                                            <a href="{{ url('storage/foto_usaha/'.$data->foto_usaha) }}" class="btn btn-secondary" type="button" id="button-addon2">Unduh</a>
+                                            <a href="{{ asset('storage/foto_usaha/'.$data->foto_usaha) }}" class="btn btn-secondary" type="button" id="button-addon2">Unduh</a>
                                         </div>
                                     </div>
                                     <br>

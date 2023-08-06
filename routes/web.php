@@ -50,6 +50,7 @@ Route::resource('verifBBM', verifBBMController::class);
 Route::get('verifBBM/diterima/{id}', [verifBBMController::class, 'diterima'])->middleware(['auth', 'isPerangkat']);
 Route::get('verifBBM/ditolak/{id}', [verifBBMController::class, 'ditolak'])->middleware(['auth', 'isPerangkat']);
 Route::get('verifBBM/kembali/{id}', [verifBBMController::class, 'kembali'])->middleware(['auth', 'isPerangkat']);
+Route::get('verifBBM/download/{id}', [verifBBMController::class, 'download'])->middleware(['auth', 'isPerangkat']);
 
 
 
