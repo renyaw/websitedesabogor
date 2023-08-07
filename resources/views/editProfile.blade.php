@@ -118,56 +118,80 @@
                       <div class="col-md-8 d-flex align-items-center">
                         <h6 class="mb-0">Edit Profil</h6> <br>
                       </div>
-                      <div class="col-md-4 text-end">
-                        <a href="editProfil">
-                          <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
-                        </a>
+
+                      <div class="konten">
+                        <form action="{{ route('profile.update', Auth::user()->id)}}" method="POST" autocomplete="on" name="form">
+                            @csrf
+                            @method('put')
+                                <div class="row">
+                                     <!-- Left -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="nama">Nama</label>
+                                            <input type="text" class="form-control ms-1" id="nama" name="nama" value="{{ old('nama', Auth::user()->nama) }}">
+                                        </div>
+                                        <hr class="border opacity-10">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="tempat_lahir">Tempat Lahir</label>
+                                            <input type="text" class="form-control ms-1" id="tempat_lahir" name="tempat_lahir" value="{{ old('tempat_lahir', Auth::user()->tempat_lahir) }}">
+                                        </div>
+                                        <hr class="border opacity-10">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="dukuh">Dukuh</label>
+                                            <input type="text" class="form-control ms-1" id="dukuh" name="dukuh" value="{{ old('dukuh', Auth::user()->dukuh) }}" >
+                                        </div>
+                                        <hr class="border opacity-10">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="rw">RW</label>
+                                            <input type="number" class="form-control ms-1" id="rw" name="rw" value="{{ old('rw', Auth::user()->rw) }}" >
+                                        </div>
+                                        <hr class="border opacity-10">
+                                    </div>
+                                    <!-- End Left -->
+
+                                    <!-- Right -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="nik">NIK</label>
+                                            <input type="text" class="form-control ms-1" id="nik" name="nik" value="{{ old('nik', Auth::user()->nik) }}" disabled readonly>
+                                        </div>
+                                        <hr class="border opacity-10">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="tgl_lahir">Tanggal Lahir</label>
+                                            <input type="date" class="form-control ms-1" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', Auth::user()->tgl_lahir) }}">
+                                        </div>
+                                        <hr class="border opacity-10">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="no_telp">Nomor Telepon (WA)</label>
+                                            <input type="text" class="form-control ms-1" id="nama" name="no_telp" value="{{ old('no_telp', Auth::user()->no_telp) }}" >
+                                        </div>
+                                        <hr class="border opacity-10">
+                                        <div class="form-group">
+                                            <!-- Default diambil dari daftar -->
+                                            <label for="rt">RT</label>
+                                            <input type="number" class="form-control ms-1" id="rt" name="rt" value="{{ old('rt', Auth::user()->rt) }}" >
+                                        </div>
+                                        <hr class="border opacity-10">
+
+                                    </div>
+
+                                </div>
+                                <div class="col-auto d-grid gap-2 d-flex justify-content-end">
+                                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Simpan</button>
+                                        <a href= "profile" type="button"  class="btn btn-outline-success">Kembali</a>
+                                    </div>
+                                <!-- End Right -->
+                            </form>
+                      </div>
                       </div>
                     </div>
-                  </div>
-                  <div class=" ps-4">
-                    <p class="text-danger">! Tekan pada bagian yang ingin di edit !</p>
-                    <br>
-                    <form action="{{ route('profile.update', Auth::user()->id)}}" method="POST" autocomplete="on" name="form">
-                        @csrf
-                        @method('put')
-                            <div>
-                                <div class="form-group">
-                                    <label for="nama" class="text-dark">Nama</label>
-                                    <input type="text" class="form-control ms-1 border-3 ps-0 pt-0 text-sm" id="nama" name="nama" value="{{ old('nama', Auth::user()->nama) }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="tempat_lahir" class="text-dark">Tempat Lahir</label>
-                                    <input type="text" class="form-control ms-1 border-3 ps-0 pt-0 text-sm" id="tempat_lahir" name="tempat_lahir" value="{{ old('tempat_lahir', Auth::user()->tempat_lahir) }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="tgl_lahir" class="text-dark">Tanggal Lahir</label>
-                                    <input type="date" class="form-control ms-1 border-3 ps-0 pt-0 text-sm" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', Auth::user()->tgl_lahir) }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="no_telp" class="text-dark">Nomor Telpon</label>
-                                    <input type="text" class="form-control ms-1 border-3 ps-0 pt-0 text-sm" id="no_telp" name="no_telp" value="{{ old('no_telp', Auth::user()->no_telp) }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="dukuh" class="text-dark">Dukuh</label>
-                                    <input type="text" class="form-control ms-1 border-3 ps-0 pt-0 text-sm" id="dukuh" name="dukuh" value="{{ old('dukuh', Auth::user()->dukuh) }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="rw" class="text-dark">RW</label>
-                                    <input type="number" class="form-control ms-1 border-3 ps-0 pt-0 text-sm" id="rw" name="rw" value="{{ old('rw', Auth::user()->rw) }}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="rt" class="text-dark">RT</label>
-                                    <input type="number" class="form-control ms-1 border-3 ps-0 pt-0 text-sm" id="rt" name="rt" value="{{ old('rt', Auth::user()->rt) }}">
-                                </div>
-                            </div>
-                            <div class="col-auto d-grid gap-2 d-flex justify-content-end">
-                                <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Simpan</button>
-                                <a href= "profile" type="button"  class="btn btn-outline-success">Kembali</a>
-                            </div>
-
-                    </form>
-
                   </div>
                 </div>
               </div>
