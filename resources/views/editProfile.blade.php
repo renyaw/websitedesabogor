@@ -184,7 +184,7 @@
 
                                 </div>
                                 <div class="col-auto d-grid gap-2 d-flex justify-content-end">
-                                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Simpan</button>
+                                        <button type="submit"  class="btn btn-outline-success">Simpan</button>
                                         <a href= "profile" type="button"  class="btn btn-outline-success">Kembali</a>
                                     </div>
                                 <!-- End Right -->

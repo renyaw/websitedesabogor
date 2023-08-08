@@ -42,6 +42,7 @@ class daftarController extends Controller
      */
     public function store(Request $request)
     {
+        
         // Validate
         $validated = $request->validate([
             'nik' => 'required|unique:users|max:16|min:16',

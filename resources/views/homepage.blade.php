@@ -84,18 +84,18 @@
         <div class="section-story-overview">
           <div class="row">
             <div class="col-md-6">
-              <div class="image-container image-left" style="background-image: url('../assets/img/login.jpg')">
+              <div class="image-container image-left" style="background-image: url('img/pemandangan.jpg')">
                 <!-- First image on the left side -->
                 <p class="blockquote blockquote-primary">Desa Bogor didominasi dengan sawah dan kebun, yang kebanyakan merupakan mata pencaharian utama dari para warga dari Desa Bogor. Sehingga membuat Desa Bogor menjadi desa yang asri nan sejuk.
                 </p>
               </div>
               <!-- Second image on the left side of the article -->
-              <div class="image-container" style="background-image: url('../assets/img/bg3.jpg')"></div>
+              <div class="image-container" style="background-image: url('img/geti.jpg')"></div>
             </div>
 
             <div class="col-md-5">
               <!-- First image on the right side, above the article -->
-              <div class="image-container image-right" style="background-image: url('../assets/img/bg1.jpg')"></div>
+              <div class="image-container image-right" style="background-image: url('img/kades.jpg')"></div>
               <h3>Geti Sebagai Makanan Tradisional Khas Desa Bogor</h3>
               <hr>
               <p>Seperti yang dapat dilihat dari judul, Geti merupakan makanan khas dari Desa Bogor. Bahan utama Geti terbuat dari Wijen, kemudian menggunakan karamel yang terbuat dari gula, yang digunakan untuk merekatkan wijen tersebut.
@@ -129,7 +129,7 @@
               </p>
             </div>
             <div class="col-md-6">
-                <div class="image-container" style="background-image: url('../assets/img/bg3.jpg')"></div>
+                <div class="image-container" style="background-image: url('img/kwt.jpg')"></div>
             </div>
           </div>
         </div>
@@ -145,37 +145,26 @@
           <div class="row justify-content-center">
             <div class="col-lg-8 col-md-12">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" role="listbox" id="satu">
                   <div class="carousel-item active">
-                    <img class="d-block" src="assets/img/bg1.jpg" alt="First slide">
+                    <img class="d-block" src="img/berangkat.jpeg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Nature, United States</h5>
+                      <h5>Tim II KKN UNDIP 2022/2023</h5>
                     </div>
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item" id="dua">
                     <img class="d-block" src="assets/img/bg3.jpg" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Somewhere Beyond, United States</h5>
                     </div>
                   </div>
-                  <div class="carousel-item">
+                  <div class="carousel-item" id="tiga">
                     <img class="d-block" src="assets/img/bg4.jpg" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Yellowstone National Park, United States</h5>
                     </div>
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <i class="now-ui-icons arrows-1_minimal-left"></i>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <i class="now-ui-icons arrows-1_minimal-right"></i>
-                </a>
               </div>
             </div>
           </div>
