@@ -56,13 +56,15 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white " href="/logout">
-
-                <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i class="material-icons opacity-10">logout</i>
-                </div>
-              <span class="nav-link-text ms-1">Logout</span>
-            </a>
+            <form action="/logout" method="post">
+                @csrf
+                <button type="submit" class="btn btn-dark text-white mx-3" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 5.2rem;  --bs-btn-font-size: .75rem;">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="material-icons opacity-10">logout</i>
+                    </div>
+                    <span class="nav-link-text text-center">Logout</span>
+                  </button>
+            </form>
         </li>
       </ul>
     </div>

@@ -35,7 +35,7 @@ Route::resource('homepage', homepageController::class);
 Route::resource('daftar', daftarController::class);
 Route::get('login', [loginController::class, 'index']);
 Route::post('login', [loginController::class, 'store']);
-Route::get('logout', [loginController::class, 'logout']);
+Route::post('logout', [loginController::class, 'logout']);
 
 // Masyarakat
 Route::resource('beranda', berandaController::class);
